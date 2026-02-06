@@ -168,13 +168,34 @@ POST /api/carrinho/finalizar
 ```
 carrinho-compras-node/
 │
-├── routes/
-│   └── carrinho.js          # Rotas da API
+├── config/
+│   └── database.js          # Configuração do MongoDB (futuro)
 │
-├── server.js                # Configuração do servidor
-├── package.json             # Dependências
-└── README.md                # Documentação
+├── middleware/
+│   └── auth.js              # Middleware de autenticação
+│
+├── models/
+│   ├── Carrinho.js          # Schema do Carrinho
+│   └── Usuario.js           # Schema do Usuário
+│
+├── routes/
+│   ├── carrinho.js          # Rotas da API do carrinho
+│   └── auth.js              # Rotas de autenticação (futuro)
+│
+├── .gitignore               # Arquivos ignorados pelo Git
+├── LICENSE                  # Licença MIT
+├── README.md                # Documentação do projeto
+├── package.json             # Dependências e scripts
+├── package-lock.json        # Lock das dependências
+└── server.js                # Configuração e inicialização do servidor
 ```
+### Descrição dos Diretórios
+
+- **`config/`** - Arquivos de configuração (banco de dados, variáveis de ambiente)
+- **`middleware/`** - Funções middleware (autenticação, validação, logs)
+- **`models/`** - Schemas e modelos de dados (MongoDB/Mongoose)
+- **`routes/`** - Definição das rotas da API (endpoints RESTful)
+- **`server.js`** - Arquivo principal que inicia o servidor Express
 
 ---
 
