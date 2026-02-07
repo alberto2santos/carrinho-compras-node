@@ -1,7 +1,7 @@
 {
   "name": "carrinho-compras-node",
-  "version": "1.0.0",
-  "description": "API RESTful para gerenciamento de carrinho de compras com sistema de sessões",
+  "version": "2.0.0",
+  "description": "API RESTful de carrinho de compras com MongoDB e autenticação",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -14,7 +14,9 @@
     "rest",
     "node",
     "express",
-    "session"
+    "mongodb",
+    "mongoose",
+    "autenticacao"
   ],
   "author": {
     "name": "Alberto Luiz dos Santos Peixoto",
@@ -31,8 +33,13 @@
   },
   "homepage": "https://github.com/alberto2santos/carrinho-compras-node#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-mongo": "^5.1.0",
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
-    "express-session": "^1.17.3"
+    "express-session": "^1.17.3",
+    "mongodb": "^6.3.0",
+    "mongoose": "^8.0.0"
   },
   "devDependencies": {
     "nodemon": "^3.0.0"
